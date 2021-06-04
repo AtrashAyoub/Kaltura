@@ -90,11 +90,21 @@ def main():
     
     with open("topnews.csv") as f:
                 data=[tuple(line) for line in csv.reader(f) if len(tuple(line))>0]
-                          
+    #print(data)
+                
+    #OLD:
+    #a.to_html("Index.html") # to save as html file named as "Index"
+    #html_file = a.to_html() # assign it to a variable (string)
+    #return(html_file)
+                
+    #NEW:            
     return render_template("table.html", headings=headings, data=data[1:])
     
     
 if __name__ == "__main__":
         app.run(host='0.0.0.0' , debug=True)
+        # calling main function
+        #main()
+
 
 #To run the app go to any browser and enter this link: http://127.0.0.1:5000/
