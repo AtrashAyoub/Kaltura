@@ -1,0 +1,35 @@
+.table {
+border-spacing: 1;
+margin: 1rem;
+border: 2px solid black;
+
+
+}
+.table__header{
+text-align: center;
+background-color: #e5e5e5;
+}
+
+tbody>tr>:nth-child(4){
+ width:200px;
+ text-align:center
+}
+
+tbody>tr>:nth-child(6){
+ width:200px;
+ text-align:center
+}
+
+
+.table__row:nth-child(even) {
+background-color: #f5f5f5;
+}
+
+.table__row:nth-child(odd) {
+background-color: #e5e5e5;
+}
+
+.table__cell {
+padding : 15px;
+border: 1px solid black;
+}
