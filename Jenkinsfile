@@ -38,10 +38,7 @@ pipeline {
 			failure {
 			  slackSend channel: "notificationapp",color: "#E01E5A", message: "Build Failed !"
 			}
-			
-	}
-       
-        
+		}
+   	}
     }
-	}
 }
