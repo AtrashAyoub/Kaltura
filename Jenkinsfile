@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-		docker "jenkins/jenkins:lts"
-	}
+    agent any
 		
     stages {
 	
@@ -9,6 +7,7 @@ pipeline {
 
             steps {
                 echo "Building the application..."
+		sh 'make'
                 
             }
         }
