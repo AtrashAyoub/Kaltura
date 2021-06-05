@@ -15,10 +15,10 @@ pipeline {
     stages {
 	   
 	    
-	# Fetch the code from Git Repo    
-	stage("Pull Code From Repo") {
-		git git_repo
-	}
+	//Fetch the code from Git Repo    
+	// stage("Pull Code From Repo") {
+	// 	git git_repo
+	// }
 	   
         stage("Build Docker") {
             steps {
