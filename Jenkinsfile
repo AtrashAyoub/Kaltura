@@ -3,7 +3,7 @@ pipeline {
 
 	environment {
           git_repo = "https://github.com/AtrashAyoub/Kaltura"
-	  docker_image = "ayoubatrash/kaltura"	
+	      docker_image = "ayoubatrash/kaltura"	
           docker_secret = "dockerhubSecret"		
 	}
 	
@@ -13,21 +13,16 @@ pipeline {
     }
 		
     stages {
-	   
-	    
-	//Fetch the code from Git Repo    
-	// stage("Pull Code From Repo") {
-	// 	git git_repo
-	// }
-	   
+        
         stage("Build Docker") {
             steps {
 		withCredentials([usernamePassword(credentialsId: docker_secret, usernameVariable: 'USERNAME',
                          passwordVariable: 'PASSWORD')]) {
-                    sh "docker login -u $USERNAME -p $PASSWORD && docker push ${docker_image} "
+                    sh "docker login -u $USERNAME -p $PASSWORD"
                  }
   
-	        sh "docker build -t  ${docker_image}:latest . && docker push ${docker_image}"
+	        sh "docker build -t  ${docker_image} . && docker push ${docker_image}:latest"
+	        //sh "docker build -t  ${docker_image}:latest . && docker push ${docker_image}"
             }
         }
 	
