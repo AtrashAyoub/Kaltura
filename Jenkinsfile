@@ -4,7 +4,7 @@ pipeline {
 	environment {
           git_repo = "https://github.com/AtrashAyoub/Kaltura"
 	  docker_image = "ayoubatrash/kaltura"	
-          docker_secret = "'ayoub-dockerhub-login"		
+          docker_secret = "dockerhubSecret"		
 	}
 	
     parameters {
