@@ -7,7 +7,7 @@ pipeline {
 
             steps {
                 echo "Building the application..."
-		sh 'make'
+		sh 'docker build -t kaltura .'
                 
             }
         }
