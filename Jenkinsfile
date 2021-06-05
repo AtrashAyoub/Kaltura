@@ -28,7 +28,7 @@ pipeline {
 	
 	stage("Run the Application") {
 		steps{	
-			sh "docker run -itd -p ${params.HTTP_PORT}:80 -p ${params.HTTPS_PORT}:80 "
+			sh "docker run -itd -p ${params.HTTP_PORT}:80 -p ${params.HTTPS_PORT}:80 ${docker_image}"
 		}
 		
 		post {
