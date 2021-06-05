@@ -8,8 +8,8 @@ pipeline {
 	}
 	
     parameters {
-	string(Name: 'HTTP_PORT', defaultValue:'80', description: 'HTTP Port')
-	string(Name: 'HTTPS_PORT', defaultValue:'443', description: 'HTTPS Port')
+	string(name: 'HTTP_PORT', defaultValue:'80', description: 'HTTP Port')
+	string(name: 'HTTPS_PORT', defaultValue:'443', description: 'HTTPS Port')
     }
 		
     stages {
@@ -38,10 +38,10 @@ pipeline {
 		
 		post {
 			success {
-			  //slackSend ...
+			  slackSend (channel: "notificationapp", color: colorCode, message: "Success !")
 			}
 			failure {
-			//	slackSend ...
+			  slackSend (channel: "notificationapp", color: colorCode, message: "Failed !")
 			}
 			
 	}
@@ -49,3 +49,4 @@ pipeline {
         
     }
 	}
+}
