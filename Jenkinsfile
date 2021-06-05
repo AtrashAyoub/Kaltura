@@ -22,7 +22,7 @@ pipeline {
                  }
   
 	        sh "docker build -t  ${docker_image} . && docker push ${docker_image}:latest"
-	        //sh "docker build -t  ${docker_image}:latest . && docker push ${docker_image}"
+	   
             }
         }
 	
@@ -33,10 +33,10 @@ pipeline {
 		
 		post {
 			success {
-			  slackSend (channel: "notificationapp", color: colorCode, message: "Success !")
+			  slackSend channel: "notificationapp", message: "Build Finished Successfully !"
 			}
 			failure {
-			  slackSend (channel: "notificationapp", color: colorCode, message: "Failed !")
+			  slackSend channel: "notificationapp", message: "Build Failed !"
 			}
 			
 	}
