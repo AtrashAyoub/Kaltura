@@ -33,10 +33,10 @@ pipeline {
 		
 		post {
 			success {
-			  slackSend channel: "notificationapp", message: "Build Finished Successfully !"
+			  slackSend channel: "notificationapp",color: "#2EB67D", message: "Build Finished Successfully !"
 			}
 			failure {
-			  slackSend channel: "notificationapp", message: "Build Failed !"
+			  slackSend channel: "notificationapp",color: "#E01E5A", message: "Build Failed !"
 			}
 			
 	}
