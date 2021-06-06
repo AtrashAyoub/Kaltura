@@ -5,7 +5,7 @@ An application that goes to Ynet RSS notifications site - where the latest news 
 
 ## **Requirements:**
 - Jdk: 
-`sudo apt install default-jdk`
+```sudo apt install default-jdk```
 - Docker:
 `sudo apt install docker.io`
 - Jenkins: 
