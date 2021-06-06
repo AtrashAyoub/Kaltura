@@ -22,5 +22,26 @@ An application that goes to Ynet RSS notifications site - where the latest news 
 2. Docker Pipeline
 3. Slack Notification Plugin
 
-### **Creating job in Jenkins:**
+## **How to run the project:**
+
+### **First: create new job in Jenkins:**
 1. Create new job, choose: Pipeline
+2. job configurations: check https://github.com/AtrashAyoub/Kaltura/blob/9376f23f71847965ba3c8f059e834a1ea788fcae/Jenkins%20job%20configurations.pdf
+3. connect to the Jenkins server and enter the following commands in terminal:
+  - `sudo -s`
+  - `sudo chmod 666 /var/run/docker.sock`
+4. build the project.. when it's done you will recieve notification on your slack channel:
+![Slack](https://user-images.githubusercontent.com/82280550/120929988-00a40080-c6f4-11eb-8c9a-9c02353638fe.jpg)
+
+5. When the building is completed successfully, you can see that the docker image has been pushed into your docker-hub account repo:
+![Screenshot 2021-06-06 182412](https://user-images.githubusercontent.com/82280550/120930169-e74f8400-c6f4-11eb-8ae8-6e3bd97dd19f.jpg)
+
+6. to view the notifications table you can open any browser and enter the following url: localhost:port
+for example: `http://127.0.0.1:5000/`
+![Screenshot 2021-06-06 182233](https://user-images.githubusercontent.com/82280550/120930029-334df900-c6f4-11eb-9c91-834d047f50a6.jpg)
+
+
+
+
+
+
