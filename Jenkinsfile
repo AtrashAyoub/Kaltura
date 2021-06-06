@@ -20,7 +20,6 @@ pipeline {
                          passwordVariable: 'PASSWORD')]) {
                     sh "docker login -u $USERNAME -p $PASSWORD"
                  }
-  		// usermod -a docker jenkins
 	        sh "docker build -t  ${docker_image} . && docker push ${docker_image}:latest"
 	   
             }
