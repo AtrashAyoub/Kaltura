@@ -16,12 +16,12 @@ pipeline {
         
         stage("Build Docker") {
             steps {
+		sh "sudo chmod 666 /var/run/docker.sock"
 		withCredentials([usernamePassword(credentialsId: docker_secret, usernameVariable: 'USERNAME',
                          passwordVariable: 'PASSWORD')]) {
                     sh "docker login -u $USERNAME -p $PASSWORD"
                  }
   		// usermod -a docker jenkins
-		sh "sudo chmod 666 /var/run/docker.sock"
 	        sh "docker build -t  ${docker_image} . && docker push ${docker_image}:latest"
 	   
             }
