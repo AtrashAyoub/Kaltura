@@ -37,8 +37,8 @@ An application that goes to Ynet RSS notifications site - where the latest news 
 5. When the building is completed successfully, you can see that the docker image has been pushed into your docker-hub account repo:
 ![Screenshot 2021-06-06 182412](https://user-images.githubusercontent.com/82280550/120930169-e74f8400-c6f4-11eb-8ae8-6e3bd97dd19f.jpg)
 
-6. To view the notifications table you can open any browser and enter the following url: localhost:port
-for example: `http://127.0.0.1:5000/`
+6. To view the notifications table you can open any browser and enter the following url: localhost:port,    
+for example: `http://127.0.0.1:5000/`    
 ![Screenshot 2021-06-06 182233](https://user-images.githubusercontent.com/82280550/120930029-334df900-c6f4-11eb-9c91-834d047f50a6.jpg)
 
 
