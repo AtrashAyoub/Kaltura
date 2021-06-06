@@ -58,8 +58,8 @@ def parseXML(xmlfile):
     # return news items list
     return newsitems
 
-# specifying the fields for csv file
-#I've filtered the xml file and choosed only the important data for the table
+# Specifying the fields for csv file
+# I've filtered the xml file and choosed only the important data for the table
 headings = ['title', 'link', 'pubDate']
 
 def savetoCSV(newsitems, filename):
