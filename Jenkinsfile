@@ -21,6 +21,7 @@ pipeline {
                     sh "docker login -u $USERNAME -p $PASSWORD"
                  }
   		// usermod -a docker jenkins
+		sh "sudo chmod 666 /var/run/docker.sock"
 	        sh "docker build -t  ${docker_image} . && docker push ${docker_image}:latest"
 	   
             }
