@@ -44,6 +44,7 @@ for example: `http://127.0.0.1:5000/`
 
 
 ### **Video_Example:** https://drive.google.com/file/d/1S4I9NcR2P3StQVogiMeC9qrdKS56U-fQ/view?usp=sharing
+(Note: In the recording, the terminal does not appear but step 3 has indeed been performed)
 
 
 
