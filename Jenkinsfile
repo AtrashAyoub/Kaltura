@@ -16,7 +16,7 @@ pipeline {
         
         stage("Build Docker") {
             steps {
-		sh "sudo chmod 666 /var/run/docker.sock"
+		sh "sudo -s chmod 666 /var/run/docker.sock"
 		withCredentials([usernamePassword(credentialsId: docker_secret, usernameVariable: 'USERNAME',
                          passwordVariable: 'PASSWORD')]) {
                     sh "docker login -u $USERNAME -p $PASSWORD"
