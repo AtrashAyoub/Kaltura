@@ -39,7 +39,11 @@ An application that goes to Ynet RSS notifications site - where the latest news 
 
 6. To view the notifications table you can open any browser and enter the following url: localhost:port    
 for example: `http://127.0.0.1:5000/`    
-![Screenshot 2021-06-06 182233](https://user-images.githubusercontent.com/82280550/120930029-334df900-c6f4-11eb-9c91-834d047f50a6.jpg)
+![Screenshot 2021-06-06 182233](https://user-images.githubusercontent.com/82280550/120930029-334df900-c6f4-11eb-9c91-834d047f50a6.jpg)     
+
+
+
+### **Video_Example:** https://drive.google.com/file/d/1S4I9NcR2P3StQVogiMeC9qrdKS56U-fQ/view?usp=sharing
 
 
 
