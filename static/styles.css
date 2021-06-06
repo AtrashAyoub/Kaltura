@@ -2,24 +2,23 @@
 border-spacing: 1;
 margin: 1rem;
 border: 2px solid black;
-
-
 }
+
+tbody>tr>:nth-child(1){
+ font-weight: bold;
+ text-align: right;
+ font-family: Helvetica;
+ vertical-align: bottom;
+ 
+}
+
 .table__header{
 text-align: center;
+font-family: Helvetica;
+font-size: 20px;
+position:sticky;
 background-color: #e5e5e5;
 }
-
-tbody>tr>:nth-child(4){
- width:200px;
- text-align:center
-}
-
-tbody>tr>:nth-child(6){
- width:200px;
- text-align:center
-}
-
 
 .table__row:nth-child(even) {
 background-color: #f5f5f5;
@@ -30,6 +29,8 @@ background-color: #e5e5e5;
 }
 
 .table__cell {
+width: 300px;
 padding : 15px;
 border: 1px solid black;
+text-align: center;
 }
