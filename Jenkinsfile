@@ -16,7 +16,7 @@ pipeline {
         
         stage("Build Docker") {
             steps {
-		sh "usermod -s docker jenkins"
+		sh "usermod -a -s docker jenkins"
 		withCredentials([usernamePassword(credentialsId: docker_secret, usernameVariable: 'USERNAME',
                          passwordVariable: 'PASSWORD')]) {
                     sh "docker login -u $USERNAME -p $PASSWORD"
