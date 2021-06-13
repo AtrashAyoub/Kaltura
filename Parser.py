@@ -88,7 +88,7 @@ def main():
     # store news items in a csv file
     savetoCSV(newsitems, 'topnews.csv')
 
-    a = pd.read_csv("topnews.csv",encoding='ISO-8859-8')
+    a = pd.read_csv("topnews.csv",encoding='UTF-8')
     
     with open("topnews.csv") as f:
                 data=[tuple(line) for line in csv.reader(f) if len(tuple(line))>0]
