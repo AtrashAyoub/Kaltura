@@ -93,7 +93,7 @@ def main():
     with open("topnews.csv") as f:
                 data=[tuple(line) for line in csv.reader(f) if len(tuple(line))>0]
                           
-    return render_template("table.html", headings=headings, data=data[1:])
+    return render_template("templates/table.html", headings=headings, data=data[1:])
     
     
 if __name__ == "__main__": 
