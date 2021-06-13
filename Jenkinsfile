@@ -27,7 +27,7 @@ pipeline {
 	
 	stage("Run the Application") {
 		steps{	
-			sh 'docker rm -f $(docker inspect --format="{{.Id}}" ynet)'
+			sh 'docker rm -f $(docker inspect --format="{{.Id}}" ynet) || true'
 			sh "docker run -itd --name ynet -p ${params.HTTP_PORT}:5000 -p ${params.HTTPS_PORT}:5000 ${docker_image}"
 		}
 		
